@@ -25,7 +25,7 @@ jobs:
       - name: Install xml2rfc
         run: pip install xml2rfc
       - name: Convert caep-interop md to xml
-        run: kramdown-rfc2629 caep-interoperability-profile-1_0.md -o caep-interoperability-profile-1_0.xml
+        run: kramdown-rfc2629 caep-interoperability-profile-1_0.md > caep-interoperability-profile-1_0.xml
       - name: Render HTML
         run: xml2rfc caep-interoperability-profile-1_0.xml --html -o caep-interoperability-profile-1_0.html
       - name: Render Text
