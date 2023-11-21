@@ -1,0 +1,7 @@
+*.html
+*.txt
+*.pdf
+*.epub
+.refcache
+*.xpr
+scratch.md
