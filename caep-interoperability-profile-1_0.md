@@ -119,16 +119,16 @@ The `delivery` field MUST be present in the Configuration of any Stream generate
 #### Stream Control
 The following Stream Configuration API Methods MUST be supported:
 
-Creating a Stream
+**Creating a Stream**
 : Receivers MUST be able to create a Stream with the Transmitter using valid authorization with the Transmitter. The Transmitter MAY support multiple streams with the same Receiver
 
-Reading Stream Configuration
+**Reading Stream Configuration**
 : A Receiver MUST be able to obtain current Stream configuration from the Transmitter by providing a valid authorization
 
-Getting the Stream Status
+**Getting the Stream Status**
 : A Receiver MUST be able to obtain the current Stream status from the Transmitter by providing a valid authorization
 
-Stream Verification
+**Stream Verification**
 : A Receiver MUST be able to verify the liveness of the Stream by requesting that the Transmitter send it a Stream Verificaiton event
 
 ## Receivers {#common-receivers}
@@ -157,10 +157,17 @@ In order to support notifying and responding to credential changes, implementati
 Within the `credential-change` event, implementations MUST support the following field values:
 
 `change_type`
-: Receivers MUST be ready to interpret all allowable values of this field. Transmitters MAY generate any allowable value of this field
+: Receivers MUST interpret all allowable values of this field. Transmitters MAY generate any allowable value of this field
 
 `credential_type`
-: 
+: Receivers MUST interpret the following values of this field. Transmitters MAY generate any of the following values:
+
+  * `password`
+  * `pin`
+  * `fido2-platform`
+  * `fido2-roaming`
+  * `fido2-u2f`
+
 
 
 
