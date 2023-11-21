@@ -149,10 +149,10 @@ All events MUST be signed using the `RS256` algorithm using a minimum of 2048-bi
 # Use Cases
 Implementations MAY choose to support one or more of the following use-cases in order to be considered interoperable implementations
 
-# Session Revocation / Logout
+## Session Revocation / Logout
 In order to support session revocation or logout, implementations MUST support the CAEP event type `session-revoked`.
 
-# Credential Change
+## Credential Change
 In order to support notifying and responding to credential changes, implementations MUST support the CAEP event type `credential-change`.
 Within the `credential-change` event, implementations MUST support the following field values:
 
