@@ -154,12 +154,12 @@ Receivers MUST be able to accept events using the Push-Based Security Event Toke
 Receivers MUST assume that all subjects are implicitly included in a Stream, without any `AddSubject` method invocations.
 
 ## Event Subjects {#common-event-subjects}
-Subjects of all events MUST support the following subject identifier formats from "Subject Identifiers for Security Event Tokens" {{RFC9493}}:
+The following subject identifier formats from "Subject Identifiers for Security Event Tokens" {{RFC9493}} MUST be supported:
 
 * `email`
 * `iss_sub`
 
-Receivers MUST be prepared to accept events with the subject identifier formats specified in this section. Transmitters MUST be able to send events with at least one of subject identifier formats specified in this section.
+Receivers MUST be prepared to accept events with any of the subject identifier formats specified in this section. Transmitters MUST be able to send events with at least one of subject identifier formats specified in this section.
 
 ## Event Signatures
 All events MUST be signed using the `RS256` algorithm using a minimum of 2048-bit keys.
